@@ -14,9 +14,9 @@ fn pr_10() {
         .arg("--name-only")
         .arg("--rotate-to")
         .arg("Cargo.toml")
-        .arg("1")
+        .arg("10")
         .arg("--repo")
-        .arg("wpiekutowski/gh-difftool")
+        .arg("speedyleion/gh-difftool")
         .assert();
     assert.success().stdout(
         "Cargo.toml\nREADME.md\nscripts/build_dist.h\n.github/workflows/release.yml\n.gitignore\n",
@@ -46,9 +46,9 @@ fn non_existent_file() {
         .arg("--name-only")
         .arg("--rotate-to")
         .arg("not.real")
-        .arg("1")
+        .arg("10")
         .arg("--repo")
-        .arg("wpiekutowski/gh-difftool")
+        .arg("speedyleion/gh-difftool")
         .assert();
     assert
         .failure()
