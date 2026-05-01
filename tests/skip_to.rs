@@ -14,9 +14,9 @@ fn pr_10() {
         .arg("--name-only")
         .arg("--skip-to")
         .arg("Cargo.toml")
-        .arg("10")
+        .arg("1")
         .arg("--repo")
-        .arg("speedyleion/gh-difftool")
+        .arg("wpiekutowski/gh-difftool")
         .assert();
     assert
         .success()
@@ -44,9 +44,9 @@ fn non_existent_file() {
         .arg("--name-only")
         .arg("--skip-to")
         .arg("non.existent")
-        .arg("10")
+        .arg("1")
         .arg("--repo")
-        .arg("speedyleion/gh-difftool")
+        .arg("wpiekutowski/gh-difftool")
         .assert();
     assert
         .failure()

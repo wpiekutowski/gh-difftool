@@ -12,9 +12,9 @@ fn pr_10() {
     let mut cmd = cargo::cargo_bin_cmd!("gh-difftool");
     let assert = cmd
         .arg("--name-only")
-        .arg("10")
+        .arg("1")
         .arg("--repo")
-        .arg("speedyleion/gh-difftool")
+        .arg("wpiekutowski/gh-difftool")
         .assert();
     assert.success().stdout(
         ".github/workflows/release.yml\n.gitignore\nCargo.toml\nREADME.md\nscripts/build_dist.h\n",
