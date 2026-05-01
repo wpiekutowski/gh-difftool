@@ -65,7 +65,7 @@ impl Difftool {
             .expect("No difftool command args set");
         let mut command = Command::new(program);
 
-        let re = regex::Regex::new(r"^/var/folders/[^/]+/[^/]+/T/gh-difftool[^/]+/").unwrap();
+        let re = regex::Regex::new(r"^.+gh-difftool[^/]+/").unwrap();
         let remote_lossy = remote.as_ref().to_string_lossy();
         let merged = OsString::from(re.replace(remote_lossy.as_ref(), "").into_owned());
 
